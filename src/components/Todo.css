@@ -1,0 +1,42 @@
+.todo{
+    text-align: center;
+    margin: 20px;
+    padding-top: 20px;
+}
+
+.todo-logo
+.todo-form
+.todo-lists {
+    margin: 20px;
+    padding: 30px;
+}
+
+.input {
+    margin: 10px;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button {
+    margin: 10px;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #143cde;
+    color: #fff;
+}
+
+.todo-lists h3 {
+    color: #f00;
+    margin: 20px 0;
+}
+
+.todo-lists ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+.todo-lists ul li {
+    color: #843cae;
+}
