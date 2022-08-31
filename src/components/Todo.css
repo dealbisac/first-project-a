@@ -41,3 +41,17 @@
 .todo-lists ul li {
     color: #843cae;
 }
+
+.todo-removeall {
+    margin: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #143cde;
+    color: #fff;
+    border: none;
+}
+
+.todo-removeall:hover {
+    background-color: #f00;
+}

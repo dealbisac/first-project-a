@@ -21,9 +21,9 @@ const Todo = () => {
                 <li>Feed a dog.</li>
                 <li>Watch a movie.</li>
             </ul>
-
-            <button name='removeall' value="Remove All"/>
         </div>
+
+        <input type="button" className='todo-removeall' value="Remove All"/>
     </div>
   )
 }
