@@ -1,14 +1,15 @@
 .todo{
     text-align: center;
-    margin: 20px;
+    margin: 80px;
     padding-top: 20px;
+    border: 1px dashed #f00;
 }
 
-.todo-logo
-.todo-form
+.todo-logo,
+.todo-form,
 .todo-lists {
-    margin: 20px;
-    padding: 30px;
+    margin: 10px;
+    padding: 10px;
 }
 
 .input {
@@ -29,7 +30,7 @@
 
 .todo-lists h3 {
     color: #f00;
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 .todo-lists ul {
