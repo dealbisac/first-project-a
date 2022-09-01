@@ -40,6 +40,7 @@
 
 .todo-lists ul li {
     color: #843cae;
+    margin: 5px 0;
 }
 
 .todo-removeall {
@@ -54,4 +55,13 @@
 
 .todo-removeall:hover {
     background-color: #f00;
+}
+
+.delete {
+    padding: 2px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #f00;
+    color: #fff;
+    border: none;
 }

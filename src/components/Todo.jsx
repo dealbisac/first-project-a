@@ -25,6 +25,12 @@ const Todo = () => {
         setTodos([]);
     }
 
+    //Delete: delete the individual todo list
+    function deleteTodo(index) {
+        const newTodos = [...todos]
+        newTodos.splice(index, 1)
+        setTodos(newTodos)
+    }
 
     return (
         <div className='todo'>
@@ -54,7 +60,15 @@ const Todo = () => {
                 <ul>
                     {
                         todos.map((todo) => (
-                            <li>{todo}</li>
+                            <li>
+                                {todo}
+                                <span
+                                    className="delete"
+                                    onClick={() => deleteTodo(todos.indexOf(todo))}
+                                >
+                                    X
+                                </span>
+                            </li>
                         ))
                     }
                 </ul>
