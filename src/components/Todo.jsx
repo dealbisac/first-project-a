@@ -12,12 +12,17 @@ const Todo = () => {
 
     console.log(inputData);
 
+    // Create: Add new items(tasks) to the existing todo array.
     // Arrow function can also be used
     // const handleSubmit = ()=> {}
-    
-    function handleSubmit(){
+    function handleSubmit() {
         setTodos([...todos, inputData])
         setInputData('')
+    }
+
+    // Remove: remove all data at once.
+    function removeAll() {
+        setTodos([]);
     }
 
 
@@ -33,7 +38,7 @@ const Todo = () => {
                     className="input"
                     placeholder='Add items'
                     value={inputData}
-                    onChange = {(e) => setInputData(e.target.value)}
+                    onChange={(e) => setInputData(e.target.value)}
                 />
                 <input
                     type="button"
@@ -55,7 +60,12 @@ const Todo = () => {
                 </ul>
             </div>
 
-            <input type="button" className='todo-removeall' value="Remove All" />
+            <input
+                type="button"
+                className='todo-removeall'
+                value="Remove All"
+                onClick={removeAll}
+            />
         </div>
     )
 }
