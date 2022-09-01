@@ -32,6 +32,14 @@ const Todo = () => {
         setTodos(newTodos)
     }
 
+    // Update: update the individual todo list
+    function updateTodo(index) {
+        const newTodos = [...todos]
+        newTodos.splice(index, 1, inputData)
+        setTodos(newTodos)
+        setInputData('')
+    }
+
     return (
         <div className='todo'>
             <div className="todo-logo">
@@ -67,6 +75,12 @@ const Todo = () => {
                                     onClick={() => deleteTodo(todos.indexOf(todo))}
                                 >
                                     X
+                                </span>
+                                <span
+                                    className='update'
+                                    onClick={() => updateTodo(todos.indexOf(todo))}
+                                >
+                                    U
                                 </span>
                             </li>
                         ))
