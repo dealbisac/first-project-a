@@ -10,6 +10,8 @@ const Todo = () => {
         'Watch a movie.'
     ])
 
+    console.log(inputData);
+
     return (
         <div className='todo'>
             <div className="todo-logo">
@@ -17,8 +19,18 @@ const Todo = () => {
             </div>
 
             <div className="todo-form">
-                <input type="text" className="input" placeholder='Add items' />
-                <input type="button" className="button" value="Add Todo" />
+                <input
+                    type="text"
+                    className="input"
+                    placeholder='Add items'
+                    value={inputData}
+                    onChange = {(e) => setInputData(e.target.value)}
+                />
+                <input
+                    type="button"
+                    className="button"
+                    value="Add Todo"
+                />
             </div>
 
             <div className="todo-lists">
