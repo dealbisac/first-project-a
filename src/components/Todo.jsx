@@ -12,6 +12,15 @@ const Todo = () => {
 
     console.log(inputData);
 
+    // Arrow function can also be used
+    // const handleSubmit = ()=> {}
+    
+    function handleSubmit(){
+        setTodos([...todos, inputData])
+        setInputData('')
+    }
+
+
     return (
         <div className='todo'>
             <div className="todo-logo">
@@ -30,6 +39,8 @@ const Todo = () => {
                     type="button"
                     className="button"
                     value="Add Todo"
+                    disabled={!inputData}
+                    onClick={handleSubmit}
                 />
             </div>
 
