@@ -68,6 +68,7 @@
 
 .update {
     padding: 2px 10px;
+    margin: 0 5px;
     text-decoration: none;
     cursor: pointer;
     background-color: #143cde;
