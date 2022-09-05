@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Input from '@mui/material/Input';
 import SendIcon from '@mui/icons-material/Send';
 
-
+import Todo from './components/Todo';
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -35,24 +35,12 @@ function App() {
           Add Todo
         </Button>
       </form>
-
-
-      {/* <ul>
+      <ul>
         {todos.map(todo => (
           <Todo todo={todo} />
         ))}
 
-      </ul> */}
-
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
       </ul>
-
       <Button 
       variant="contained"
       className="removeall"
