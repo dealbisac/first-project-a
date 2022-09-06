@@ -3,6 +3,8 @@ import './App.css';
 import Button from '@mui/material/Button';
 import Input from '@mui/material/Input';
 import SendIcon from '@mui/icons-material/Send';
+
+//import firebase files
 import db from './firebasefile';
 import firebase from 'firebase';
 
