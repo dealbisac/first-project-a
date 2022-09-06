@@ -3,6 +3,8 @@ import './App.css';
 import Button from '@mui/material/Button';
 import Input from '@mui/material/Input';
 import SendIcon from '@mui/icons-material/Send';
+import db from './firebasefile';
+import firebase from 'firebase';
 
 import Todo from './components/Todo';
 
@@ -13,6 +15,13 @@ function App() {
   const addTodo = (event) => {
     // this will fire off when we click the button
     event.preventDefault(); // will stop the refresh
+
+     // Write to database (CREATE)
+     db.collection('todos').add({
+      todo: input,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+
     setTodos([...todos, input]);
     setInput(''); // clear up the input after clicking add todo button
   }
