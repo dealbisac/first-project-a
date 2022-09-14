@@ -1,4 +1,4 @@
-import React, { useState, } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Button from '@mui/material/Button';
 import Input from '@mui/material/Input';
@@ -13,6 +13,20 @@ import Todo from './components/Todo';
 function App() {
   const [todos, setTodos] = useState([])
   const [input, setInput] = useState('');
+
+  // when the app loads, 
+  // we need to listen to the database and 
+  // fetch new todos as they get added/removed
+  useEffect(() => {
+    // this code here... fires when the App.js loads
+    db.collection('todos')
+    .orderBy('timestamp', 'desc')
+    .onSnapshot(snapshot => {
+      setTodos(snapshot.docs.map(
+        doc => ({id: doc.id, todo: doc.data().todo})
+        ))
+    })
+  }, [input]);
 
   const addTodo = (event) => {
     // this will fire off when we click the button
