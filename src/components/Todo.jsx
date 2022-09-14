@@ -92,7 +92,9 @@ function Todo(props) {
         variant="contained"
         color="secondary"
         startIcon={<DeleteIcon />}
-        onClick={event => db.collection('todos').doc(props.todo.id).delete()}
+        onClick={event => 
+          db.collection('todos')
+          .doc(props.todo.id).delete()}
 
       >Delete</Button>
     </li>
